@@ -1,57 +1,35 @@
 import React from "react";
+import styled from "styled-components"
 
 const sidebar = props => {
   return (
     <div className="sidebar">
+<MenuBar>
 
-      <div className="item">
+<img src="http://www.cliparthut.com/clip-arts/59/home-icon-png-transparent-clipart-2VjETX.png" alt="home-icon" style={{height:"45px", width:"50px", left:"-115px", marginTop: "150px", marginLeft:"12px", zIndex: "10000"}}/>
 
-<img src="http://www.stickpng.com/assets/thumbs/588a668cd06f6719692a2d1b.png" alt="home-icon" style={{height:"50px", width:"50px", left:"-115px", topMargin: "150px", zIndex: "10000"}}/>
+<img src="https://images.vexels.com/media/users/3/157446/isolated/preview/383f43305de4fbc3c6a3bdfb25a1b758-marketing-graph-icon-by-vexels.png" alt="graph-icon" style={{height:"45px", width:"40px", left:"-115px", marginTop: "45px", marginLeft:"15px", zIndex: "10000"}}/>
 
 
-      <h1 style={{marginTop:"150px", zIndex:"1000"}}> HEy</h1>
-        <div className="icon">
-          <i className="fa fa-tachometer" />
-        </div>
-      </div>
-      <div className="item active">
-      Hiiii
-        <div className="icon">
-          <i className="fa fa-home" />
-        </div>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <i className="fa fa-line-chart" />
-        </div>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <i className="fa fa-certificate" />
-        </div>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <i className="fa fa-inbox" />
-        </div>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <i className="fa fa-desktop" />
-        </div>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <i className="fa fa-users" />
-        </div>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <i className="fa fa-flask" />
-        </div>
-      </div>
+  <img src="https://cdn0.iconfinder.com/data/icons/personal-business-finance-5/64/x-22-512.png" alt="budget-icon" style={{height:"45px", width:"45px", left:"-115px", marginTop: "45px", marginLeft:"15px", zIndex: "10000"}}/>
+
+
+<img src="https://cdn.pixabay.com/photo/2016/07/31/20/54/calendar-1559935_960_720.png" alt="cal-icon" style={{height:"40px", width:"40px", left:"-115px", marginTop: "45px", marginLeft:"15px", zIndex: "10000"}}/>
+
+<img src="http://free-icon-rainbow.com/i/icon_02453/icon_024530_256.png" alt="paper-icon" style={{height:"45px", width:"45px", left:"-115px", marginTop: "45px", marginLeft:"15px", zIndex: "10000"}}/>
+
+
+
+</MenuBar>
+
     </div>
   );
 };
 
 export default sidebar;
+
+const MenuBar = styled.div`
+
+z-index: 10000 !important;
+
+`

@@ -10,7 +10,7 @@ const topNav = () => {
       <div className="navbar-nav ml-auto">
 
         <div className="user-detail-section">
-          <span className="pr-2">User Name</span>
+          <span className="pr-2">Hi, Joe</span>
           <span className="img-container">
             <img src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" className="rounded-circle" alt="user-avatar" />
           </span>

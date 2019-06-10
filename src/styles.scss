@@ -172,6 +172,23 @@ body {
   @media screen and (min-width: 991px) {
   margin-left: 5%;
 }
+
+@media only screen
+and (max-width : 320px) {
+  margin-left: 0%;
+}
+}
+
+.navbar {
+
+  @media screen and (min-width: 991px) {
+  margin-left: 5%;
+}
+
+@media only screen
+and (max-width : 320px) {
+  margin-left: 0%;
+}
 }
 
 /* avatar image style */
@@ -383,20 +400,20 @@ body {
 //   font-family: $fontFamily;
 // }
 
-.sidebar, .item {
+.sidebar {
   background-color: $weak;
-  // // bottom: 0;
-  position: absolute;
+bottom: 0;
+  // position: absolute;
   height: 100%;
   top: 0;
   // width: 60px;
   z-index: 0;
   // overflow: auto;
-  width: 180px;
+  width: 70px;
 position: fixed;
 height: 100%;
 // z-index: 10000;
-left: -110px;
+
 transition: all .4s ease 0s;
 }
 
