@@ -1,0 +1,409 @@
+// import fonts
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/Apercu.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Apercu-Light";
+  src: url("./fonts/Apercu-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Apercu-Reg";
+  src: url("./fonts/Apercu-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Apercu-Bold";
+  src: url("./fonts/Apercu-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Apercu-Italic";
+  src: url("./fonts/Apercu-Italic.ttf") format("truetype");
+}
+
+// Betterfin style guide:
+$primaryColor: #f66652;
+$primaryColorInteracted: lighten($primaryColor, 10%);
+$primaryColorLightened: lighten($primaryColor, 33%);
+
+$secondaryColor: #537871;
+$secondaryColorInteracted: lighten($secondaryColor, 10%);
+$secondaryColorLightened: #e4f1ee;
+
+$stroke: #dfdad8;
+$strokeLight: lighten($stroke, 8%);
+$strokeDarkened: $secondaryColorLightened;
+
+$bgColorLight: #fff;
+$bgColorLightened: #fafafa;
+$bgColor: #f3f3f3;
+
+$successColor: #a7c958;
+$warningColor: $primaryColor;
+$warningLight: lighten($warningColor, 15%);
+$weak: #f57a23;
+$moderate: #f5a623;
+$good: #fdeb00;
+$strong: #89de55;
+$fontColor: #3f4047;
+$fontColorLight: #fff;
+$fontColorLightened: #898b96;
+$fontFamily: "Apercu", sans-serif;
+$fontWeightHeavy: "Apercu-Bold", sans-serif;
+$fontWeightNormal: "Apercu";
+$fontWeightLight: "Apercu-Light";
+
+// global styles
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 125px;
+  box-sizing: border-box;
+  background-color: $bgColorLightened !important;
+  font-family: $fontFamily, sans-serif !important;
+  color: $primaryColor;
+  padding-top: 125px;
+  font-weight: $fontWeightNormal;
+}
+
+.button-new {
+  font-family: $fontWeightLight;
+  color: $fontColor;
+  background-color: $bgColorLight !important;
+  border-radius: 3px;
+  border: none;
+  padding: 0.5em;
+  margin: 0.25em;
+}
+
+.button-new:hover {
+  box-shadow: 0px 2px 25px 5px rgba(0, 0, 0, 0.05);
+  color: $warningColor;
+  font-family: $fontWeightHeavy;
+}
+
+.pr-2 {
+  color: $fontColor;
+  font-size: 0.875rem;
+  font-family: $fontFamily;
+}
+/* typography styles */
+.is-dark-text {
+  color: $primaryColor;
+}
+
+.is-dark-text-light {
+  font-family: $fontFamily;
+  color: $secondaryColor;
+  font-weight: $fontWeightHeavy;
+}
+
+.is-light-text {
+  /* color: rgb(193, 204, 222); */
+  color: $fontColor;
+}
+
+/* font weights */
+
+.font-medium {
+  font-weight: $fontWeightNormal;
+}
+
+.font-bold {
+  font-family: $fontWeightHeavy;
+}
+
+/* text sizes */
+.text-x-large {
+  font-size: 2rem;
+  font-family: $fontWeightHeavy;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+
+.text-medium {
+  font-size: 1.125rem;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-x-small {
+  font-size: 0.75rem;
+}
+
+.sub-caption {
+  font-family: $fontWeightLight;
+  color: $fontColorLightened;
+}
+/* letter spacing */
+.letter-spacing {
+  letter-spacing: 0.05rem;
+}
+
+.chart-container svg text {
+  letter-spacing: 0.05rem;
+}
+
+.container-fluid {
+  width: 95% !important;
+}
+
+/* navbar styles */
+.is-white {
+  background: white;
+  height: 65px;
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.05);
+}
+
+.is-dark {
+  background: $bgColorLightened;
+  height: 60px;
+}
+.rounded-circle {
+  cursor: pointer;
+}
+
+.nav-secondary {
+  margin-top: 65px;
+  @media screen and (min-width: 991px) {
+  margin-left: 5%;
+}
+}
+
+/* avatar image style */
+.img-container > img {
+  width: 40px;
+}
+.rounded-circle {
+  cursor: pointer;
+}
+
+#card {
+  border: none;
+}
+
+.total-profit-card {
+  color: white;
+  background-color: black;
+}
+
+/* bootstrap grid-card style */
+.grid-card {
+  border: none;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem;
+  height: calc(100%);
+  justify-content: space-between;
+}
+
+.chart-card {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+  height: calc(100%);
+  border: 0px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  min-height: 30px;
+}
+
+.is-card-dark {
+  background: white !important;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+}
+
+.logo-adjust {
+  margin-top: -4px;
+}
+
+.col-md-8.border-left {
+  border-left: 1px solid rgba(222, 226, 230, 0.07) !important;
+}
+
+.conv > span {
+  display: inline-block;
+  min-width: 75px !important;
+}
+
+.chart-container > * {
+  height: 100% !important;
+}
+
+.col-md-8 .chart-container.full-height > * {
+  height: 130px !important;
+}
+
+.full-height.border-left,
+.full-height.border-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.custom-dropdown {
+  border-radius: 4px;
+  background: transparent;
+  // border: 1px solid rgba(193, 204, 222, 0.2);
+  font-weight: 500;
+}
+
+.Dropdown-menu {
+  max-height: 300px;
+}
+
+.Dropdown-control {
+  border: none;
+  color: #c1ccde;
+  background: transparent;
+}
+
+.Dropdown-arrow {
+  top: 18px;
+}
+
+/* spinner */
+
+.spinner {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  set the color of the icon
+*/
+.spinner > svg path,
+.spinner > svg rect {
+  fill: #ccc;
+}
+
+/* media queries */
+@media screen and (max-width: 991px) {
+  .container-fluid.pr-5,
+  .container-fluid.pl-5 {
+    width: 90% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+
+}
+
+@media screen and (min-width: 991px) {
+  .full-height {
+    height: 100% !important;
+  }
+
+}
+
+@media screen and (max-width: 567px) {
+  .full-height.border-left,
+  .full-height.border-right {
+    border-left: none !important;
+    border-right: none !important;
+
+    .raphael-group-42-creditgroup,
+    .raphael-group-98-creditgroup,
+    .raphael-group-154-creditgroup,
+    .raphael-group-311-creditgroup,
+    .raphael-group-209-creditgroup,
+    .raphael-group-289-parentgroup {
+      display: none !important;
+
+    }
+
+    .sidebar {
+      display: none !important;
+    }
+  }
+
+  /* other targeted styles */
+  .chart-container {
+    height: 180px !important;
+  }
+
+  .large {
+    height: 350px !important;
+  }
+}
+
+.raphael-group-42-creditgroup,
+.raphael-group-98-creditgroup,
+.raphael-group-154-creditgroup,
+.raphael-group-311-creditgroup,
+.raphael-group-209-creditgroup {
+  display: none !important;
+}
+
+// .navbar-brand{
+//   font-family: $fontFamily;
+// }
+
+.sidebar, .item {
+  background-color: $weak;
+  // // bottom: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  // width: 60px;
+  z-index: 0;
+  // overflow: auto;
+  width: 180px;
+position: fixed;
+height: 100%;
+// z-index: 10000;
+left: -110px;
+transition: all .4s ease 0s;
+}
+
+
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+tr.collapse.in {
+  display:table-row;
+}
+
+#main:active {.collapse {display:none}}
