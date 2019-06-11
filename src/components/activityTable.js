@@ -11,12 +11,13 @@ const activityTable = props => {
       }}
     >
       <div className="col-md-8 col-lg-12 is-light-text mb-4">
-        <div id="card" className="card is-card-dark">
-          <div className="text-medium" style={{ margin: "15px" }}>
+
+        <div id="card" className="card table">
+          <div className="header letter-spacing" style={{ margin: "15px", fontSize:"15px"}}>
             Recent Activity
           </div>
 
-          <table class="table col-md-8 col-lg-12 is-light-text mb-4">
+          <table className="table col-md-8 col-lg-12 is-light-text mb-4">
             <thead>
               <tr>
                 <th />
@@ -24,7 +25,7 @@ const activityTable = props => {
                 <th>Date</th>
                 <th>Type v</th>
                 <th>Amount</th>
-                <th>Status</th>
+
               </tr>
             </thead>
             <tbody>
@@ -34,15 +35,15 @@ const activityTable = props => {
                 <td>5/29/2019</td>
                 <td>REFUND</td>
                 <td>$126.27</td>
-                <td>Pending</td>
+
               </tr>
-              <tr class="collapse order1">
+              <tr className="collapse order1">
                 <td>1</td>
                 <td />
                 <td>Shirt</td>
                 <td>$12.27</td>
               </tr>
-              <tr class="collapse order1">
+              <tr className="collapse order1">
                 <td>1</td>
                 <td />
                 <td>Shoes</td>
@@ -54,23 +55,26 @@ const activityTable = props => {
                 <td>6/7/2019</td>
                 <td>EXPENSE</td>
                 <td>$92.15</td>
-                <td>Complete</td>
+
 
               </tr>
-              <tr class="collapse order2">
+              <tr className="collapse order2">
                 <td>2</td>
                 <td />
                 <td>$12.27</td>
               </tr>
-              <tr class="collapse order2">
+              <tr className="collapse order2">
                 <td>2</td>
                 <td />
                 <td>Item</td>
                 <td>$62.27</td>
               </tr>
             </tbody>
+            
           </table>
+
         </div>
+
       </div>
     </div>
   );

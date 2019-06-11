@@ -53,6 +53,10 @@ $fontWeightHeavy: "Apercu-Bold", sans-serif;
 $fontWeightNormal: "Apercu";
 $fontWeightLight: "Apercu-Light";
 
+.header {
+  font-family: $fontWeightHeavy;
+  color: $secondaryColor;
+}
 // global styles
 body {
   margin: 0;
@@ -227,6 +231,7 @@ and (max-width : 320px) {
   padding: 1.5rem;
   height: calc(100%);
   justify-content: space-between;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
 .chart-card {
@@ -246,6 +251,11 @@ and (max-width : 320px) {
   padding: 1.5rem 1.5rem 0.75rem 1.5rem;
   height: calc(100%);
   border: 0px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+}
+
+.table{
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
 .card-heading {
@@ -262,13 +272,11 @@ and (max-width : 320px) {
   min-height: 30px;
 }
 
-.is-card-dark {
-  background: white !important;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
-}
+
 
 .logo-adjust {
   margin-top: -4px;
+
 }
 
 .col-md-8.border-left {

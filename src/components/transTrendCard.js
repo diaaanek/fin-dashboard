@@ -4,7 +4,7 @@ import ReactFC from "react-fusioncharts";
 const transTrendCard = props => {
   return (
     <div className="col-md-6 mb-4">
-      <div id="card" className="card is-card-dark chart-card">
+      <div id="card" className="card chart-card">
         <div className="chart-container large full-height">
           <ReactFC
             {...{

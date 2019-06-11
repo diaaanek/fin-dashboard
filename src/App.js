@@ -33,6 +33,7 @@ const App = props => {
 
 const [incomeTotal, setIncomeTotal] = useState(null)
 const [totalBalance, setTotalBalance] = useState(null)
+const [totalTrans, setTotalTrans] = useState(null)
 
   const [amRevenue, setAmRevenue] = useState(null);
   const [ebRevenue, setEbRevenue] = useState(null);
@@ -110,6 +111,7 @@ useEffect(() => {
       }).then(data => {
         // Work with JSON data here
         console.log(data.trxs.transaction);
+        // setTotalTrans(data.trxs.transaction)
         var incomeArray = data.trxs.transaction.filter(function(el) {
           return el.categoryType === "INCOME"
         })
@@ -217,6 +219,7 @@ useEffect(() => {
         totalR={totalRevenue}
         totalB = {totalBalance}
         incomeTotal = {incomeTotal}
+        totalTrans = {totalTrans}
 
         amR={amRevenue}
         etR={etRevenue}

@@ -45,7 +45,7 @@ const Dashboard = props => {
           revenue
         />
         <Card
-          heading={"Total Users"}
+          heading={"Total Transaactions"}
           value={props.ebR}
           icon={"2"}
           revenue
@@ -95,7 +95,7 @@ const Dashboard = props => {
     </div>
     <ActivityTable />
 
-
+<div className="pr-2" style={{textAlign:"center",marginBottom:"1em"}}>2019 Diane Korongy</div>
 
 </div>
 

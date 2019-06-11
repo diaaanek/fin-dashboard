@@ -37,7 +37,7 @@ const chartConfigs = {
 function totalSpend() {
   return (
     <div className="col-md-6 mb-4">
-      <div id="card" className="card is-card-dark chart-card">
+      <div id="card" className="card chart-card">
         <div id="card" className="chart-container large full-height">
       <ReactFC {...chartConfigs} />
     </div>

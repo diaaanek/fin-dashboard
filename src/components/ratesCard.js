@@ -4,9 +4,14 @@ import ReactFC from "react-fusioncharts";
 const ratesCard = props => {
   return (
     <div className="col-md-8 col-lg-9 is-light-text mb-4">
-      <div  id="card" className="card is-card-dark chart-card">
+
+      <div  id="card" className="card chart-card">
+        <div className="is-dark-text-light header letter-spacing text-small" style={{marginBottom: "1em"}}>
+        Sales Breakdown
+        </div>
         <div className="row full-height">
           <div className="col-sm-4 full height">
+
             <div className="chart-container full-height">
               <ReactFC
                 {...{
@@ -17,7 +22,8 @@ const ratesCard = props => {
                   containerBackgroundOpacity: "0",
                   dataSource: {
                     chart: {
-                      caption: "Income",
+
+                      caption: "INCOME",
                       theme: "financial",
                       defaultCenterLabel: `${props.purchaseRate}%`,
                       paletteColors: "#3B70C4, #000000"
@@ -49,7 +55,7 @@ const ratesCard = props => {
                   containerBackgroundOpacity: "0",
                   dataSource: {
                     chart: {
-                      caption: "Expenses",
+                      caption: "Profit",
                       theme: "financial",
                       defaultCenterLabel: `50%`,
                       paletteColors: "#A7C958, #000000"
@@ -81,7 +87,7 @@ const ratesCard = props => {
                   containerBackgroundOpacity: "0",
                   dataSource: {
                     chart: {
-                      caption: "Transfers",
+                      caption: "Outcome",
                       theme: "financial",
                       defaultCenterLabel: `3%`,
                       paletteColors: "#EDF8B1, #000000"
