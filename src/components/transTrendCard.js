@@ -1,5 +1,5 @@
 import React from "react";
-import ReactFC from "react-fusioncharts";
+import ReactFC from 'react-fusioncharts';
 
 const transTrendCard = props => {
   return (
@@ -8,7 +8,7 @@ const transTrendCard = props => {
         <div className="chart-container large full-height">
           <ReactFC
             {...{
-              type: "bar2d",
+              type: 'Pie3D',
               width: "100%",
               height: "100%",
               dataFormat: "json",
@@ -17,10 +17,32 @@ const transTrendCard = props => {
               dataSource: {
                 chart: {
                   theme: "financial",
-                  caption: "Latest Transactions",
+                  caption: "Expenses ",
                   subCaption: "By Category Type"
                 },
-                data: props.ordersTrendStore
+                data:
+                 [
+    {
+      label: "Online Services",
+      value: "300000"
+    },
+    {
+      label: "Debt",
+      value: "230000"
+    },
+    {
+      label: "Travel",
+      value: "180000"
+    },
+    {
+      label: "Utilities",
+      value: "270000"
+    },
+    {
+      label: "Insurance",
+      value: "20000"
+    }
+  ]
 
               }
 

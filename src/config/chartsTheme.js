@@ -35,7 +35,7 @@ window.FusionCharts.register("theme", {
       }
     },
 
-    bar2d: {
+    Pie3D: {
       chart: {
         placeValuesInside: "0",
         usePlotGradientColor: "0",
@@ -45,19 +45,44 @@ window.FusionCharts.register("theme", {
         divLineAlpha: "10",
         divLineColor: "#0000",
         captionFontColor: "#8091ab",
-        paletteColors: "#F5A623",
+        captionFontBold: 2,
         valuePadding: "5",
-        yAxisName: "Orders",
+        valueFontBold: "1",
+        captionAlignment: "left",
+        captionPadding: "20"
+      }
+    },
+
+    column2d: {
+      chart: {
+        placeValuesInside: "0",
+        usePlotGradientColor: "0",
+        showAlternateVGridColor: "0",
+        chartLeftMargin: "5",
+        canvasLeftMargin: "5",
+        captionFontBold: 3,
+        divLineAlpha: "10",
+        divLineColor: "#0000",
+        captionFontColor: "#8091ab",
+        paletteColors: "#F5A623, #a7c958, #f57a23 ",
+        valuePadding: "5",
+        yAxisName: "Transactions",
         yAxisNameAlpha: "50",
         yAxisNameFontSize: "12",
         yAxisNamePadding: "20",
         valueFontBold: "0",
         stroke: "white",
         valueFontSize: "12",
-        plotToolText: "<div>$label<br><b>$value orders</b>",
         captionAlignment: "left",
-        captionPadding: "20"
+        captionPadding: "20",
+        bgColor: "none",
+
+    paletteColors: "#F5A623,#89de55, #f57a23, #a7c958",
+    borderColor: "#ffffff",
+    bgColor: "#DDDDDD"
+
       }
+
     },
 
     doughnut2d: {

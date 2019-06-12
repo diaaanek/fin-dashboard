@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 
-const activityTable = props => {
+
+const activityTable = ({totalTrans, props}) => {
+
   return (
     <div
       className="row"
@@ -10,69 +11,41 @@ const activityTable = props => {
         display: "flex"
       }}
     >
+
       <div className="col-md-8 col-lg-12 is-light-text mb-4">
 
-        <div id="card" className="card table">
-          <div className="header letter-spacing" style={{ margin: "15px", fontSize:"15px"}}>
+          <div id="card" className="card table">
+          <div className="header" style={{ margin: "15px", fontSize:"15px"}}>
             Recent Activity
           </div>
-
-          <table className="table col-md-8 col-lg-12 is-light-text mb-4">
+          <div className="table-responsive">
+          <table className=".table-sm table col-md-8 col-lg-12 is-light-text mb-4">
             <thead>
               <tr>
-                <th />
-                <th>ID</th>
-                <th>Date</th>
-                <th>Type v</th>
-                <th>Amount</th>
-
+                <th scope="col"/>
+                <th scope="col">ID</th>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+                <th scope="col">Amount</th>
               </tr>
             </thead>
-            <tbody>
-              <tr data-toggle="collapse" data-target=".order1">
-                <td>+</td>
-                <td>1001</td>
-                <td>5/29/2019</td>
-                <td>REFUND</td>
-                <td>$126.27</td>
+            {totalTrans.slice(0,5).map((trans) => (
+            <tbody className="text-small">
+
+              <tr >
+                <td style={{cursor:"pointer"}}>+</td>
+                <td>{trans.id}</td>
+                <td>{trans.createdDate}</td>
+                <td>{trans.categoryType}</td>
+                <td>${trans.amount.amount}</td>
 
               </tr>
-              <tr className="collapse order1">
-                <td>1</td>
-                <td />
-                <td>Shirt</td>
-                <td>$12.27</td>
-              </tr>
-              <tr className="collapse order1">
-                <td>1</td>
-                <td />
-                <td>Shoes</td>
-                <td>$62.27</td>
-              </tr>
-              <tr data-toggle="collapse" data-target=".order2">
-                <td>+</td>
-                <td>1002</td>
-                <td>6/7/2019</td>
-                <td>EXPENSE</td>
-                <td>$92.15</td>
 
-
-              </tr>
-              <tr className="collapse order2">
-                <td>2</td>
-                <td />
-                <td>$12.27</td>
-              </tr>
-              <tr className="collapse order2">
-                <td>2</td>
-                <td />
-                <td>Item</td>
-                <td>$62.27</td>
-              </tr>
             </tbody>
-            
+  ))}
+<button className="text-small button-new"> View All </button>
           </table>
-
+</div>
         </div>
 
       </div>

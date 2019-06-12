@@ -8,7 +8,7 @@ const card = props => {
       return "http://www.iconarchive.com/download/i97948/flat-icons.com/flat/Wallet.ico";
 
     } else if (props.icon === "3") {
-      return "https://previews.123rf.com/images/123vector/123vector1710/123vector171000360/88439433-illustration-of-pdf-circle-red-icon.jpg";
+      return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJL0E5XODh_AYS2gTxmtg5wvAOdrfnCFfGxqFtCrhZt9j9DY0";
     } else {
       return null;
     }
@@ -26,7 +26,7 @@ const card = props => {
             <div className="card-heading-brand">
               <img src={determineCardIcon()} alt=
               "icon" style={{height:"35px", width:"35px"}}/>
-          {/*}  <img src="https://image.flaticon.com/icons/svg/61/61140.svg" style={{height:"15px", width:"15px", margin:"0", cursor:"pointer"}}/> */}
+
             </div>
           ) : null}
         </div>
@@ -47,7 +47,7 @@ const card = props => {
           ) : null}
         </div>
 
-        <div className="text-small pl-2 sub-caption"> ↓ 12% since last week</div>
+        <div className="text-small pl-2 sub-caption"> ↓ 12% since last month</div>
       </div>
     </div>
   );

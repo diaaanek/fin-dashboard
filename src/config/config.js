@@ -6,13 +6,6 @@ const config = {
 // fetch
 // {trxs_count.transaction.TOTAL.count}
 
-//fetch
-// trxs.transaction.categoryType
-// INCOME
-// EXPENSE
-// TRANSFER
-
-
 // fetching account info
 // Object [0] => account
 // accountName

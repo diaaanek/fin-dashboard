@@ -145,11 +145,11 @@ body {
 }
 /* letter spacing */
 .letter-spacing {
-  letter-spacing: 0.05rem;
+  // letter-spacing: 0.05rem;
 }
 
 .chart-container svg text {
-  letter-spacing: 0.05rem;
+  // letter-spacing: 0.05rem;
 }
 
 .container-fluid {
@@ -192,9 +192,17 @@ and (max-width : 320px) {
 @media only screen
 and (max-width : 320px) {
   margin-left: 0%;
-}
+  } 
 }
 
+.table, .table-responsive {
+  @media only screen
+  and (max-width : 320px) {
+   display: block !important;
+  display: table;
+
+  }
+}
 /* avatar image style */
 .img-container > img {
   width: 40px;
@@ -400,7 +408,9 @@ and (max-width : 320px) {
 .raphael-group-98-creditgroup,
 .raphael-group-154-creditgroup,
 .raphael-group-311-creditgroup,
-.raphael-group-209-creditgroup {
+.raphael-group-210-creditgroup,
+.raphael-group-209-creditgroup,
+.raphael-group-345-creditgroup, .raphael-group-365-creditgroup  {
   display: none !important;
 }
 
@@ -424,11 +434,3 @@ height: 100%;
 
 transition: all .4s ease 0s;
 }
-
-
-@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
-tr.collapse.in {
-  display:table-row;
-}
-
-#main:active {.collapse {display:none}}

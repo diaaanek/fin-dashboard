@@ -93,7 +93,9 @@ const Dashboard = props => {
 
 
     </div>
-    <ActivityTable />
+    <ActivityTable
+    totalTrans = {props.totalTrans}
+      />
 
 <div className="pr-2" style={{textAlign:"center",marginBottom:"1em"}}>2019 Diane Korongy</div>
 

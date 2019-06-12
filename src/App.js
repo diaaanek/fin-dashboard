@@ -32,7 +32,7 @@ const App = props => {
   const [totalRevenue, setTotalRevenue] = useState(null);
 
 const [incomeTotal, setIncomeTotal] = useState(null)
-const [totalBalance, setTotalBalance] = useState(null)
+const [totalBalance, setTotalBalance] = useState([])
 const [totalTrans, setTotalTrans] = useState(null)
 
   const [amRevenue, setAmRevenue] = useState(null);
@@ -110,35 +110,31 @@ useEffect(() => {
         return response.json();
       }).then(data => {
         // Work with JSON data here
-        console.log(data.trxs.transaction);
-        // setTotalTrans(data.trxs.transaction)
+        setTotalTrans(data.trxs.transaction)
         var incomeArray = data.trxs.transaction.filter(function(el) {
           return el.categoryType === "INCOME"
         })
-          console.log(incomeArray)
+
           var incomeTotal = incomeArray.reduce(function(prev,cur) {
             return prev + cur.amount.amount;
           }, 0);
-          console.log(incomeTotal)
+
           setIncomeTotal(incomeTotal)
 
 
           var expenseArray = data.trxs.transaction.filter(function(el) {
             return el.categoryType === "EXPENSE"
           })
-          console.log(expenseArray)
+
           var transferArray = data.trxs.transaction.filter(function(el) {
             return el.categoryType === "TRANSFER"
           })
-          console.log(transferArray)
+
       }).catch(err => {
         // Do something for an error here
         console.log("Error Reading data " + err);
       });
-
-  //
-
-})
+}, [])
 
   const refreshData = useCallback(() => {
     if (!dropdownSelected || !items) return;
@@ -157,9 +153,8 @@ useEffect(() => {
       if (row.month === dropdownSelected) {
         // console.log(`${row.month}: ${row.source} : ${row.revenue}`)
         if (row.source === "AM") {
-          amR += parseInt(row.revenue, 10);
           ordTrendStore.push({
-            label: "Orders",
+            label: "Transactions",
             value: row.orders,
             displayValue: `${row.orders} orders`
           });
@@ -208,7 +203,9 @@ useEffect(() => {
     setDropdownSelected(event.value);
   };
 
+console.log(totalTrans)
   return (
+
     <React.Fragment>
       <TopNav />
       <Nav/>
@@ -219,6 +216,7 @@ useEffect(() => {
         totalR={totalRevenue}
         totalB = {totalBalance}
         incomeTotal = {incomeTotal}
+
         totalTrans = {totalTrans}
 
         amR={amRevenue}

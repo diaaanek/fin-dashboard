@@ -6,22 +6,21 @@ import ReactFC from "react-fusioncharts";
 
 ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 
+
 const dataSource = {
   chart: {
-    caption: "Latest Transactions",
-    // subCaption: "In MMbbl = One Million barrels",
+    caption: "Balances",
+    // subCaption: "Current Balance by Month",
     xAxisName: "Month",
-    yAxisName: "Dollars",
-    numberSuffix: "K",
+    yAxisName: "Average Values",
+
     theme: "financial"
   },
   data: [
-    { label: "Jan", value: "190" },
-    { label: "Feb", value: "160" },
-    { label: "March", value: "180" },
-    { label: "April", value: "140" },
-    { label: "May", value: "115" },
-    { label: "June", value: "100" }
+    { label: "Mar", value: "111.29" },
+    { label: "Apr", value: "192.79" },
+    { label: "May", value: "192.79" },
+    { label: "Jun", value: "192.79" }
   ]
 };
 
