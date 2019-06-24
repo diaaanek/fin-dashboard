@@ -174,33 +174,29 @@ body {
 .nav-secondary {
   margin-top: 65px;
   @media screen and (min-width: 991px) {
-  margin-left: 5%;
-}
+    margin-left: 5%;
+  }
 
-@media only screen
-and (max-width : 320px) {
-  margin-left: 0%;
-}
+  @media only screen and (max-width: 320px) {
+    margin-left: 0%;
+  }
 }
 
 .navbar {
-
   @media screen and (min-width: 991px) {
-  margin-left: 5%;
+    margin-left: 5%;
+  }
+
+  @media only screen and (max-width: 320px) {
+    margin-left: 0%;
+  }
 }
 
-@media only screen
-and (max-width : 320px) {
-  margin-left: 0%;
-  } 
-}
-
-.table, .table-responsive {
-  @media only screen
-  and (max-width : 320px) {
-   display: block !important;
-  display: table;
-
+.table,
+.table-responsive {
+  @media only screen and (max-width: 320px) {
+    display: block !important;
+    display: table;
   }
 }
 /* avatar image style */
@@ -239,7 +235,7 @@ and (max-width : 320px) {
   padding: 1.5rem;
   height: calc(100%);
   justify-content: space-between;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
 .chart-card {
@@ -262,7 +258,7 @@ and (max-width : 320px) {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
-.table{
+.table {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
@@ -280,11 +276,8 @@ and (max-width : 320px) {
   min-height: 30px;
 }
 
-
-
 .logo-adjust {
   margin-top: -4px;
-
 }
 
 .col-md-8.border-left {
@@ -363,14 +356,12 @@ and (max-width : 320px) {
   .sidebar {
     display: none !important;
   }
-
 }
 
 @media screen and (min-width: 991px) {
   .full-height {
     height: 100% !important;
   }
-
 }
 
 @media screen and (max-width: 567px) {
@@ -386,7 +377,6 @@ and (max-width : 320px) {
     .raphael-group-209-creditgroup,
     .raphael-group-289-parentgroup {
       display: none !important;
-
     }
 
     .sidebar {
@@ -410,7 +400,8 @@ and (max-width : 320px) {
 .raphael-group-311-creditgroup,
 .raphael-group-210-creditgroup,
 .raphael-group-209-creditgroup,
-.raphael-group-345-creditgroup, .raphael-group-365-creditgroup  {
+.raphael-group-345-creditgroup,
+.raphael-group-365-creditgroup {
   display: none !important;
 }
 
@@ -419,8 +410,8 @@ and (max-width : 320px) {
 // }
 
 .sidebar {
-  background-color: $weak;
-bottom: 0;
+  background-color: white;
+  bottom: 0;
   // position: absolute;
   height: 100%;
   top: 0;
@@ -428,9 +419,35 @@ bottom: 0;
   z-index: 0;
   // overflow: auto;
   width: 70px;
-position: fixed;
-height: 100%;
-// z-index: 10000;
+  position: fixed;
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  // z-index: 10000;
 
-transition: all .4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.home-btn {
+  background: #f12711; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   #f5af19,
+  //   #f12711
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #f5af19, #f12711);
+
+  height: 50px;
+  width: 50px;
+  margin-top: 12px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 50px;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.sidebar-text {
+  color: $fontColorLightened;
+  margin-left: 20px;
+  margin-top: 8px;
 }
